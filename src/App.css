@@ -1,38 +1,79 @@
-.App {
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
   text-align: center;
+  
+}
+.clock {
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  display: inline-block;
+  margin: 150px;
+  padding: 20px;
+  transition: box-shadow 0.3s ease;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.clock:hover {
+  box-shadow: 0px 20px 50px rgba(0,0,0,0.2);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.break, .session {
+  margin: 15px 0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+#break-label, #session-label {
+  color: #888;
+  margin-bottom: 5px;
+}
+
+button {
+  background-color: #0f8b8d;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  margin: 0 5px;
+  padding: 10px 20px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0a6b6c;
+}
+
+.faArrowDown, .faArrowUp, .faPlay, .faPause, .faRotate {
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.timer {
+  font-size: 2em;
+  margin: 20px 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#timer-label {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+#time-left {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+}
+
+.down-label{
+  display: flex;
+  justify-content: space-between;
+}
+
+#session-length, #break-length {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+}
+
+#session-length:hover, #break-length:hover {
+  color: #0a6b6c;
 }
